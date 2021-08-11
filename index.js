@@ -45,8 +45,9 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
+function copy(array){
   /*your code here*/
+  // return a spread of array//
 }    
 
 
@@ -64,8 +65,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(array){
  /*your code here*/
+//  write if array.length is 31 return true, else return false//
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +83,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
+function addFlavor(array, string){
  /*your code here*/
+//  unshift to add the string to the front, return the array//
 }
 
 
@@ -97,8 +100,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(array){
  /*your code here*/
+//  .pop to remove last item and return the array//
 }
 
 
@@ -114,10 +118,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, i){
   /*your code here*/
+  return array[i]
 }
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -134,8 +138,11 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(array, string){
   /*your code here*/
+  // loop through the array and check each index or that string, and an if that checks for an exact match '==='
+  // if item matches string, remmove using .splice(index and how many to delete)
+  // return the array outside of the loop//
 }
 
 
@@ -170,7 +177,7 @@ filteredArray.push(array[i]);
   return filteredArray;
 }
 
-console.log('task 7', filterByWord(originalFlavors, 'Chocolate'));
+// console.log('task 7', filterByWord(originalFlavors, 'Chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
