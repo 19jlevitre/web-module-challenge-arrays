@@ -45,12 +45,12 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(array){
+function copy(arr){
   /*your code here*/
-  return [... originalFlavors];
+  return [...arr];
   // return a spread of array//
 }    
-
+// console.log(copy(originalFlavors));
 
 
 
@@ -150,16 +150,18 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(array, string){
+function removeFlavorByName(arr, string){
   /*your code here*/
-  for(let i = 0; i < removeFlavorByName.length; i++){
-    if(removeFlavorByName[i]===(string)){
-      array.splice(i,1);
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === string){
+      arr.splice(i,1);
     }
-    return array;
+    
     
   }
-  console.log(removeFlavorByName(originalFlavors, 'Chocolate'));
+  return arr;
+
+  console.log(removeFlavorByName(originalFlavors, 'Vanilla'));
   // loop through the array and check each index or that string, and an if that checks for an exact match '==='
   // if item matches string, remmove using .splice(index and how many to delete)
   // return the array outside of the loop//
