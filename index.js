@@ -47,6 +47,7 @@ Use the copy function below to do the following:
 
 function copy(array){
   /*your code here*/
+  return [... originalFlavors];
   // return a spread of array//
 }    
 
@@ -68,6 +69,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 function is31Flavors(array){
  /*your code here*/
 //  write if array.length is 31 return true, else return false//
+if(array.length = 31){
+  return true
+}else return false
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -82,11 +86,16 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
+// const flavorAdded = [...originalFlavors];
 function addFlavor(array, string){
  /*your code here*/
 //  unshift to add the string to the front, return the array//
+
+array.unshift(string);
+return array;
+
 }
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -99,12 +108,15 @@ Use the removeLastFlavor function below to do the following:
 
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-
+// const flavorRemoved = [...originalFlavors];
 function removeLastFlavor(array){
- /*your code here*/
-//  .pop to remove last item and return the array//
-}
+//  /*your code here*/
+// //  .pop to remove last item and return the array//
+ array.pop();
+return array;
 
+}
+console.log(removeFlavorByName(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -140,6 +152,14 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(array, string){
   /*your code here*/
+  for(let i = 0; i < removeFlavorByName.length; i++){
+    if(removeFlavorByName[i]===(string)){
+      array.splice(i,1);
+    }
+    return array;
+    
+  }
+  console.log(removeFlavorByName(originalFlavors, 'Chocolate'));
   // loop through the array and check each index or that string, and an if that checks for an exact match '==='
   // if item matches string, remmove using .splice(index and how many to delete)
   // return the array outside of the loop//
